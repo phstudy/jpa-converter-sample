@@ -3,13 +3,14 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence">
 	<persistence-unit name="pu" transaction-type="RESOURCE_LOCAL">
-		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<class>org.phstudy.model.Book</class>
+		<class>org.phstudy.jpa.conventer.MapToStringConveter</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:postgresql:DATABASE_NAME?stringtype=unspecified" />
-			<property name="javax.persistence.jdbc.user" value="USERNAME" />
-			<property name="javax.persistence.jdbc.password" value="PASSWORD" />
+				value="jdbc:postgresql:YOUR_DATABASE_NAME?stringtype=unspecified" />
+			<property name="javax.persistence.jdbc.user" value="YOUR_DATABASE_USERNAME" />
+			<property name="javax.persistence.jdbc.password" value="YOUR_DATABASE_PASSWORD" />
 
 			<property name="javax.persistence.database-product-name"
 				value="PostgreSQL" />
@@ -24,6 +25,5 @@
 			<property name="eclipselink.cache.size.default" value="0" />
 			<property name="eclipselink.cache.type.default" value="None" />
 		</properties>
-
 	</persistence-unit>
 </persistence> 
