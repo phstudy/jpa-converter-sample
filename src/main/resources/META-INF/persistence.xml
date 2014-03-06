@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+	<persistence-unit name="pu" transaction-type="RESOURCE_LOCAL">
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql:DATABASE_NAME?stringtype=unspecified" />
+			<property name="javax.persistence.jdbc.user" value="USERNAME" />
+			<property name="javax.persistence.jdbc.password" value="PASSWORD" />
+
+			<property name="javax.persistence.database-product-name"
+				value="PostgreSQL" />
+			<property name="javax.persistence.schema-generation.database.action"
+				value="create" />
+			<property
+				name="javax.persistence.schema-generation.create-database-schemas"
+				value="true" />
+			<property name="eclipselink.logging.level" value="fine" />
+
+			<property name="eclipselink.cache.shared.default" value="false" />
+			<property name="eclipselink.cache.size.default" value="0" />
+			<property name="eclipselink.cache.type.default" value="None" />
+		</properties>
+
+	</persistence-unit>
+</persistence> 
