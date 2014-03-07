@@ -1,4 +1,4 @@
-package org.phstudy.jpa.conventer;
+package org.phstudy.eclipselink.conventer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ public class MapToStringConveter implements
 		AttributeConverter<Map<String, String>, Object> {
 
 	@Override
-	public Object convertToDatabaseColumn(Map<String, String> attribute) {
+	public String convertToDatabaseColumn(Map<String, String> attribute) {
 		if (attribute == null || attribute.isEmpty()) {
 			return "";
 		}
@@ -22,8 +22,8 @@ public class MapToStringConveter implements
 
 	@Override
 	public Map<String, String> convertToEntityAttribute(Object dbData) {
-
-		// EclipseLink Bug...
+		// EclipseLink Bug or Feature? Hstore will be converted to HashMap, not
+		// String..., so the target type should be Object
 		if (dbData instanceof String) {
 			String str = (String) dbData;
 			if (str.trim().length() == 0) {
@@ -35,5 +35,4 @@ public class MapToStringConveter implements
 			return (Map<String, String>) dbData;
 		}
 	}
-
 }
