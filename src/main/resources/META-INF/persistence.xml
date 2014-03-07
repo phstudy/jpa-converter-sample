@@ -29,5 +29,6 @@
 			<!-- hibernate properties -->
 			<property name="hibernate.show_sql" value="true" />
 		</properties>
+
 	</persistence-unit>
 </persistence> 
