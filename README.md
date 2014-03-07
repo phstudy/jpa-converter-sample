@@ -1,2 +1,2 @@
-JPA 2.1 Converter Sample
+PostgreSQL hstore JPA 2.1 Converter Sample 
 
