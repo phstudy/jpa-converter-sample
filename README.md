@@ -1,6 +1,6 @@
-###PostgreSQL hstore JPA 2.1 Converter for Hibernate and EclipseLink Sample 
+###PostgreSQL hstore JPA 2.1 Converters for Hibernate and EclipseLink Sample 
 
-This project demos how to convert PostgreSQL hstore datatype to Java Map<String, String> object and 
+This project demos how to convert PostgreSQL ```hstore``` datatype to Java ```Map<String, String>``` object and 
 
 
 This project was tested on
@@ -9,4 +9,4 @@ This project was tested on
 * EclipseLink 2.5.2-M1
 
 
-If your PostgreSQL does not contain the datatype hstore, you can create the hstore extension by the sql command: ```CREATE EXTENSION hstore;```
+If your PostgreSQL does not have the ```hstore``` datatype, you can create the ```hstore``` datatype by the following sql command: ```CREATE EXTENSION hstore;```
