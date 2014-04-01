@@ -1,7 +1,7 @@
-###PostgreSQL hstore JPA 2.1 Converters for Hibernate and EclipseLink Sample 
+jpa-converter-sample [![Build Status](https://travis-ci.org/phstudy/jpa-converter-sample.svg?branch=master)](https://travis-ci.org/phstudy/jpa-converter-sample)
+=========
 
-This project demos how to convert PostgreSQL ```hstore``` datatype to Java ```Map<String, String>``` object and 
-
+This project demos how to convert PostgreSQL ```hstore``` datatype to Java ```Map<String, String>``` object.
 
 This project was tested on
 * PostgreSQL 9.3
