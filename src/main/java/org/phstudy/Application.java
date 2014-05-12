@@ -59,7 +59,7 @@ public class Application {
 
 		em.close();
 
-		// persistence context #2
+		// persistence context #2 (avoid Level 1 cache)
 		em = factory.createEntityManager();
 
 		book = (IBook) em.find(bookClz, book.getId());
