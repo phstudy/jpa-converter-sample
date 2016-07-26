@@ -1,6 +1,8 @@
 *.log
 build
 bin
+classes
+.idea
 .classpath
 .settings
 .project

@@ -1,10 +1,9 @@
 apply plugin:'application'
-apply plugin:'eclipse'
 apply plugin:'java'
 
 mainClassName = "org.phstudy.Application"
 
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 version = '1.0'
 jar {
     manifest {
@@ -12,24 +11,21 @@ jar {
     }
 }
 
-
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
-    compile group: 'log4j', name: 'log4j', version: '1.2.16'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
+
+    compile group: 'ru.yandex.qatools.embed', name: 'postgresql-embedded', version: '1.15'
+    compile group: 'org.postgresql', name: 'postgresql', version: '9.4.1209'
+    compile group: 'org.eclipse.persistence', name: 'javax.persistence', version: '2.1.1'
+    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.6.3'
     
-    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.2.1'
-    
-    compile group: 'org.postgresql', name: 'postgresql', version: '9.3-1101-jdbc41'
-    compile group: 'org.eclipse.persistence', name: 'javax.persistence', version: '2.1.0'
-    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.5.2-M1'
-    
-    compile 'org.hibernate:hibernate-core:4.3.1.Final'
-    compile 'org.hibernate:hibernate-entitymanager:4.3.1.Final'
+    compile 'org.hibernate:hibernate-core:5.2.1.Final'
+    compile 'org.hibernate:hibernate-entitymanager:5.2.1.Final'
     
     testCompile group: 'junit', name: 'junit', version: '4.+'
 }
